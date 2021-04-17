@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import Loading from '../../copmonents/Loading';
 import RegionData from '../../copmonents/RegionData';
 
-const ID_KEY = 'kopuk';
+import { REGION_ID_KEY } from '../../Const/index';
 
 const useRegionData = (
     regions: Region[] = [],
@@ -13,7 +13,7 @@ const useRegionData = (
     const { id } = useParams<{ id: string }>();
 
     useEffect(() => {
-        setRegionData(regions.find((r) => r[ID_KEY] === id));
+        setRegionData(regions.find((r) => r[REGION_ID_KEY] === id));
     }, [regions, id]);
 };
 
