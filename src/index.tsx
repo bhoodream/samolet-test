@@ -1,11 +1,10 @@
-import "react";
-import ReactDOM from "react-dom";
-import { ConfigProvider } from "antd";
-import { BrowserRouter } from "react-router-dom";
-import ruRU from "antd/lib/locale-provider/ru_RU";
-import App from "./app";
-import * as serviceWorker from "./serviceWorker";
-import "antd/dist/antd.css";
+import ReactDOM from 'react-dom';
+import { ConfigProvider } from 'antd';
+import { BrowserRouter } from 'react-router-dom';
+import ruRU from 'antd/lib/locale-provider/ru_RU';
+import App from './app';
+import * as serviceWorker from './serviceWorker';
+import 'antd/dist/antd.css';
 
 ReactDOM.render(
     <ConfigProvider locale={ruRU}>
@@ -13,7 +12,7 @@ ReactDOM.render(
             <App />
         </BrowserRouter>
     </ConfigProvider>,
-    document.getElementById("root")
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

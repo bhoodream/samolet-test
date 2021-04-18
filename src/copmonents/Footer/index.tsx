@@ -9,7 +9,8 @@ const Footer: FC = () => {
                     <Typography.Paragraph type={'secondary'}>
                         {'разработал '}
                         <a
-                            href={'https://github.com/bhoodream'}
+                            rel="noreferrer"
+                            href={'https://github.com/bhoodream/samolet-test'}
                             target={'_blank'}
                         >
                             <i>{'Федоров Вадим'}</i>

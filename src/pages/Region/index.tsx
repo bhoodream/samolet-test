@@ -2,7 +2,6 @@ import { FC, useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import {
     Result,
-    Collapse,
     Typography,
     Space,
     Skeleton,
@@ -28,7 +27,7 @@ const useRegionData = (
         }
 
         setRegionData(regions.find((r) => r[REGION_ID_KEY] === id));
-    }, [regions, id]);
+    }, [regions, setRegionData, id]);
 };
 
 const RegionPage: FC<{ regions: Region[] }> = ({ regions }) => {
@@ -42,7 +41,12 @@ const RegionPage: FC<{ regions: Region[] }> = ({ regions }) => {
                 status="404"
                 title="Ошибка"
                 subTitle="Такого региона не существует..."
-                extra={<Link to={'/'}>{`< Вернуться на главную`}</Link>}
+                extra={
+                    <Link to={'/'}>
+                        <LeftOutlined />
+                        {` Вернуться на главную`}
+                    </Link>
+                }
             />
         );
     }
@@ -86,24 +90,12 @@ const RegionPage: FC<{ regions: Region[] }> = ({ regions }) => {
                             <Descriptions.Item label="Использовано" span={2}>
                                 {data.funds_used} руб.
                             </Descriptions.Item>
-                            <Descriptions.Item label="Инвентарь" span={3}>
+                            <Descriptions.Item label="Сводка" span={3}>
                                 Сотрудники: {data.employees} чел.
                                 <br />
                                 Компьютеры: {data.computers} шт.
                                 <br />
                                 Цифровые каталоги: {data.digital_catalogs} шт.
-                            </Descriptions.Item>
-                            <Descriptions.Item label="JSON-данные" span={3}>
-                                <Collapse>
-                                    <Collapse.Panel
-                                        header={data.territory}
-                                        key="1"
-                                    >
-                                        <pre style={{ whiteSpace: 'pre-wrap' }}>
-                                            {JSON.stringify(data, null, 4)}
-                                        </pre>
-                                    </Collapse.Panel>
-                                </Collapse>
                             </Descriptions.Item>
                         </Descriptions>
                     </Space>

@@ -13,5 +13,5 @@ export const useStatLibraryData = (setData: any) => {
         };
 
         loadData();
-    }, []);
+    }, [setData]);
 };
