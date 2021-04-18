@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import { Layout } from 'antd';
+import { Layout, Space, BackTop } from 'antd';
 import { Switch, Route } from 'react-router-dom';
 
 import { useStatLibraryData } from './api/hooks';
 
-import RegionDataWrapper from './containers/RegionDataWrapper';
-import RegionsList from './copmonents/RegionsList';
+import Header from './copmonents/Header/index';
+import Content from './copmonents/Content/index';
+import Footer from './copmonents/Footer/index';
+import RegionPage from './pages/Region/index';
+import RegionsPage from './pages/Regions/index';
 
 import './app.css';
 
@@ -15,15 +18,22 @@ export default function App() {
     useStatLibraryData(setRegions);
 
     return (
-        <Layout>
-            <Switch>
-                <Route path="/:id">
-                    <RegionDataWrapper regions={regions} />
-                </Route>
-                <Route path="/">
-                    <RegionsList items={regions} />
-                </Route>
-            </Switch>
+        <Layout style={{ minHeight: '100vh' }}>
+            <Space direction="vertical" size={30}>
+                <Header />
+                <Content>
+                    <Switch>
+                        <Route path="/:id">
+                            <RegionPage regions={regions} />
+                        </Route>
+                        <Route path="/">
+                            <RegionsPage items={regions} />
+                        </Route>
+                    </Switch>
+                </Content>
+                <Footer />
+            </Space>
+            <BackTop />
         </Layout>
     );
 }
