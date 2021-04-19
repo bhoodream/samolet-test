@@ -56,9 +56,6 @@ const RegionPage: FC<{ regions: Region[] }> = ({ regions }) => {
                     <Typography.Title>{data.territory}</Typography.Title>
                     <Space direction={'vertical'} size={'large'}>
                         <RegionStats data={data} />
-                        <Typography.Title level={3}>
-                            Администрация
-                        </Typography.Title>
                         <RegionAdministration data={data} />
                     </Space>
                 </>
