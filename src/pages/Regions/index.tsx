@@ -44,8 +44,6 @@ const RegionsPage: FC<{ regions: Region[] }> = ({ regions }) => {
         setShowItemsCount((c) => c + SHOW_ITEMS_COUNT);
     }, []);
 
-    const onSortModeChange = useCallback(setSortMode, [setSortMode]);
-
     return (
         <Layout>
             <Typography.Title>Библиотечная Статистика</Typography.Title>
@@ -65,7 +63,7 @@ const RegionsPage: FC<{ regions: Region[] }> = ({ regions }) => {
                         size="large"
                         style={{ width: '100%' }}
                         defaultValue={sortMode}
-                        onChange={onSortModeChange}
+                        onChange={setSortMode}
                     >
                         <Select.Option value={SORT_MODES.territory}>
                             <Space>
