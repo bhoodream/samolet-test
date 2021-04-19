@@ -21,18 +21,18 @@ import {
 
 import RegionStats from '../../copmonents/RegionStats/index';
 
-import { sortItems, searchItems } from './utils';
+import { sortRegions, searchRegions } from './utils';
 
 import { REGION_ID_KEY, SHOW_ITEMS_COUNT, SORT_MODES } from '../../Const/index';
 
-const RegionsPage: FC<{ items: Region[] }> = ({ items }) => {
+const RegionsPage: FC<{ regions: Region[] }> = ({ regions }) => {
     const [showItemsCount, setShowItemsCount] = useState(SHOW_ITEMS_COUNT);
     const [sortMode, setSortMode] = useState<SORT_MODES>(SORT_MODES.territory);
     const [searchValue, setSearchValue] = useState('');
 
     const listItems = useMemo(
-        () => sortItems(searchItems(items, searchValue), sortMode),
-        [items, sortMode, searchValue]
+        () => sortRegions(searchRegions(regions, searchValue), sortMode),
+        [regions, sortMode, searchValue]
     );
 
     const onSearchChange = useCallback((e) => {
@@ -49,7 +49,7 @@ const RegionsPage: FC<{ items: Region[] }> = ({ items }) => {
     return (
         <Layout>
             <Typography.Title>Библиотечная Статистика</Typography.Title>
-            {!items.length ? (
+            {!regions.length ? (
                 <Skeleton />
             ) : (
                 <Space direction={'vertical'} size={'middle'}>

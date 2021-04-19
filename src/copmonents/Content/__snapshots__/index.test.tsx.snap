@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ant-row"
+  style={Object {}}
+>
+  <div
+    className="ant-col ant-col-xs-22 ant-col-xs-offset-1 ant-col-sm-20 ant-col-sm-offset-2"
+    style={Object {}}
+  >
+    Contentt
+  </div>
+</div>
+`;

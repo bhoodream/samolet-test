@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<footer
+  className="ant-layout-footer"
+>
+  <div
+    className="ant-row ant-row-center"
+    style={Object {}}
+  >
+    <div
+      className="ant-col"
+      style={Object {}}
+    >
+      <div
+        className="ant-typography ant-typography-secondary"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
+      >
+        разработал 
+        <a
+          href="https://github.com/bhoodream/samolet-test"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <i>
+            Федоров Вадим
+          </i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+`;

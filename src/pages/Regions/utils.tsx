@@ -1,6 +1,6 @@
 import { SORT_MODES } from '../../Const/index';
 
-export const sortItems = (items: Region[], sortMode?: SORT_MODES) => {
+export const sortRegions = (regions: Region[], sortMode?: SORT_MODES) => {
     const sortByLibrary = (a: Region, b: Region) => b.libraries - a.libraries;
     const sortByTerritory = (a: Region, b: Region) => {
         return a.territory
@@ -12,24 +12,24 @@ export const sortItems = (items: Region[], sortMode?: SORT_MODES) => {
     const sortBySubscribers = (a: Region, b: Region) =>
         b.subscribers - a.subscribers;
 
-    const newListItems = [...items];
+    const newRegions = [...regions];
 
     switch (sortMode) {
         case SORT_MODES.libraries:
-            newListItems.sort(sortByLibrary);
+            newRegions.sort(sortByLibrary);
             break;
         case SORT_MODES.subscribers:
-            newListItems.sort(sortBySubscribers);
+            newRegions.sort(sortBySubscribers);
             break;
 
         default:
-            newListItems.sort(sortByTerritory);
+            newRegions.sort(sortByTerritory);
     }
 
-    return newListItems;
+    return newRegions;
 };
 
-export const searchItems = (items: Region[], searchValue: string = '') =>
-    items.filter(
-        (i) => i.territory.toLowerCase().indexOf(searchValue.toLowerCase()) > -1
+export const searchRegions = (regions: Region[], searchValue: string = '') =>
+    regions.filter(
+        (r) => r.territory.toLowerCase().indexOf(searchValue.toLowerCase()) > -1
     );

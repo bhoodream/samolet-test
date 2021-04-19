@@ -27,7 +27,7 @@ export default function App() {
                             <RegionPage regions={regions} />
                         </Route>
                         <Route path="/">
-                            <RegionsPage items={regions} />
+                            <RegionsPage regions={regions} />
                         </Route>
                     </Switch>
                 </Content>
