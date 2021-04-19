@@ -13,7 +13,6 @@ import RegionsPage from './pages/Regions/index';
 import './app.css';
 
 export default function App() {
-    const a = laksjdf;
     const [regions, setRegions] = useState<Region[]>([]);
 
     useStatLibraryData(setRegions);
