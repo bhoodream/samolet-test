@@ -6,7 +6,6 @@ const getSpan = (value: number, colSize: string) =>
     ['xs', 'sm', 'md'].indexOf(colSize) > -1 ? 1 : value;
 
 const RegionAdministration: FC<{ data: Region }> = ({ data }) => {
-    const isWorking = Math.random() > 0.5;
     const colSize = useMediaQuery();
 
     return (
@@ -28,11 +27,7 @@ const RegionAdministration: FC<{ data: Region }> = ({ data }) => {
                     {data.address}
                 </Descriptions.Item>
                 <Descriptions.Item label="Состояние" span={getSpan(3, colSize)}>
-                    {isWorking ? (
-                        <Badge status="success" text="Работает" />
-                    ) : (
-                        <Badge status="error" text="Закрыто" />
-                    )}
+                    <Badge status="success" text="Работает" />
                 </Descriptions.Item>
                 <Descriptions.Item label="Бюджет">
                     {data.funds_budget} руб.

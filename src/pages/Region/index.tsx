@@ -3,8 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 import { Result, Typography, Space, Skeleton, Layout } from 'antd';
 import { LeftOutlined } from '@ant-design/icons';
 
-import RegionStats from '../../copmonents/RegionStats/index';
-import RegionAdministration from '../../copmonents/RegionAdministration/index';
+import RegionStats from '../../copmonents/Region/Stats/index';
+import RegionAdministration from '../../copmonents/Region/Administration/index';
 
 import { REGION_ID_KEY } from '../../Const/index';
 
@@ -52,13 +52,13 @@ const RegionPage: FC<{ regions: Region[] }> = ({ regions }) => {
             {!data ? (
                 <Skeleton />
             ) : (
-                <>
+                <Layout>
                     <Typography.Title>{data.territory}</Typography.Title>
                     <Space direction={'vertical'} size={'large'}>
                         <RegionStats data={data} />
                         <RegionAdministration data={data} />
                     </Space>
-                </>
+                </Layout>
             )}
         </Layout>
     );

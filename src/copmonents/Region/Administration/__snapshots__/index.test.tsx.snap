@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className="ant-layout"
+>
+  <h3
+    className="ant-typography"
+    style={
+      Object {
+        "WebkitLineClamp": undefined,
+      }
+    }
+  >
+    Администрация
+  </h3>
+  <div
+    className="ant-descriptions ant-descriptions-bordered"
+    style={
+      Object {
+        "backgroundColor": "#fff",
+      }
+    }
+  >
+    <div
+      className="ant-descriptions-view"
+    >
+      <table>
+        <tbody>
+          <tr
+            className="ant-descriptions-row"
+          >
+            <th
+              className="ant-descriptions-item-label"
+              colSpan={1}
+              style={Object {}}
+            >
+              <span>
+                Учреждение
+              </span>
+            </th>
+            <td
+              className="ant-descriptions-item-content"
+              colSpan={1}
+              style={Object {}}
+            >
+              <span>
+                test full name
+              </span>
+            </td>
+            <th
+              className="ant-descriptions-item-label"
+              colSpan={1}
+              style={Object {}}
+            >
+              <span>
+                Адрес
+              </span>
+            </th>
+            <td
+              className="ant-descriptions-item-content"
+              colSpan={1}
+              style={Object {}}
+            >
+              <span>
+                test address
+              </span>
+            </td>
+            <th
+              className="ant-descriptions-item-label"
+              colSpan={1}
+              style={Object {}}
+            >
+              <span>
+                Состояние
+              </span>
+            </th>
+            <td
+              className="ant-descriptions-item-content"
+              colSpan={1}
+              style={Object {}}
+            >
+              <span>
+                <span
+                  className="ant-badge ant-badge-status ant-badge-not-a-wrapper"
+                  style={Object {}}
+                >
+                  <span
+                    className="ant-badge-status-dot ant-badge-status-success"
+                    style={Object {}}
+                  />
+                  <span
+                    className="ant-badge-status-text"
+                    style={
+                      Object {
+                        "color": undefined,
+                      }
+                    }
+                  >
+                    Работает
+                  </span>
+                </span>
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="ant-descriptions-row"
+          >
+            <th
+              className="ant-descriptions-item-label"
+              colSpan={1}
+              style={Object {}}
+            >
+              <span>
+                Бюджет
+              </span>
+            </th>
+            <td
+              className="ant-descriptions-item-content"
+              colSpan={1}
+              style={Object {}}
+            >
+              <span>
+                123
+                 руб.
+              </span>
+            </td>
+            <th
+              className="ant-descriptions-item-label"
+              colSpan={1}
+              style={Object {}}
+            >
+              <span>
+                Использовано
+              </span>
+            </th>
+            <td
+              className="ant-descriptions-item-content"
+              colSpan={1}
+              style={Object {}}
+            >
+              <span>
+                234
+                 руб.
+              </span>
+            </td>
+            <th
+              className="ant-descriptions-item-label"
+              colSpan={1}
+              style={Object {}}
+            >
+              <span>
+                Сводка
+              </span>
+            </th>
+            <td
+              className="ant-descriptions-item-content"
+              colSpan={1}
+              style={Object {}}
+            >
+              <span>
+                Сотрудники: 
+                345
+                 чел.
+                <br />
+                Компьютеры: 
+                456
+                 шт.
+                <br />
+                Цифровые каталоги: 
+                567
+                 шт.
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+`;
