@@ -4,9 +4,9 @@ import { Switch, Route } from 'react-router-dom';
 
 import { useStatLibraryData } from './api/hooks';
 
-import Header from './copmonents/Header/index';
-import Content from './copmonents/Content/index';
-import Footer from './copmonents/Footer/index';
+import Header from './copmonents/Layout/Header/index';
+import Content from './copmonents/Layout/Content/index';
+import Footer from './copmonents/Layout/Footer/index';
 import RegionPage from './pages/Region/index';
 import RegionsPage from './pages/Regions/index';
 
